@@ -256,9 +256,12 @@
     <Content Include="Admin\uploadfiles\latest_banner4.jpg" />
     <Content Include="Admin\uploadfiles\ltst_logo-1.png" />
     <Content Include="Admin\Virtual.aspx" />
+    <Content Include="index.html" />
+    <Content Include="t.png" />
     <Content Include="Investment.aspx" />
     <Content Include="HomeTips.aspx" />
     <Content Include="Templates\Double_Image_NewsLetter.html" />
+    <Content Include="Templates\index.html" />
     <Content Include="Unsubscribe.aspx" />
     <Content Include="Controls\MyListingsControl.ascx" />
     <Content Include="Controls\ExclusiveDetail.ascx" />

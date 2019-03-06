@@ -173,7 +173,18 @@ namespace Property.Controls
             mail.From = new MailAddress(FromEmailID);
             mail.Subject = "Satish Patil";
             string body = "";
-            body = "<p>Thanks for contacting us.</p>";
+            var Template = "";
+            Template = "Templates/index.html";
+
+            using (StreamReader reader = new StreamReader(Path.Combine(HttpRuntime.AppDomainAppPath, Template)))
+            {
+                body = reader.ReadToEnd();
+                //Replace UserName and Other variables available in body Stream
+
+            }
+            //string body = "";
+            //body = "<p>Thanks for contacting us.</p>";
+            mail.Body = body;
             mail.Body = body;
 
             mail.IsBodyHtml = true;

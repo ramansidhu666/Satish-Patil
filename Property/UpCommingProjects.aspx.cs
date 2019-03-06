@@ -11,6 +11,7 @@ using System.Net.Mail;
 using System.Net;
 using Property_cls;
 using Property_Cryptography;
+using System.IO;
 
 namespace Property
 {
@@ -147,7 +148,15 @@ namespace Property
             mail.From = new MailAddress(FromEmailID);
             mail.Subject = "Satish Patil";
             string body = "";
-            body = "<p>Your new project registered successfully.</p>";
+            var Template = "";
+            Template = "Templates/index.html";
+
+            using (StreamReader reader = new StreamReader(Path.Combine(HttpRuntime.AppDomainAppPath, Template)))
+            {
+                body = reader.ReadToEnd();
+                //Replace UserName and Other variables available in body Stream
+
+            }
             mail.Body = body;
 
             mail.IsBodyHtml = true;
